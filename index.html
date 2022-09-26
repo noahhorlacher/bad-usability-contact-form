@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" type="module" defer></script>
+</head>
+
+<body>
+    <h1>Contact Us</h1>
+    <hr>
+    <div id="form">
+        <label>Your Name</label>
+        <div>
+            <span id="display_name"></span>
+            <button id="plus_name">+</button>
+            <button id="minus_name">-</button>
+        </div>
+        <label>Phone number</label>
+        <div>
+            <span id="display_phone"></span>
+            <button id="plus_phone">+</button>
+            <button id="reset_phone">Reset</button>
+        </div>
+        <label>Email Address</label>
+        <p>Draw a letter</p>
+        <canvas id="canvas_letter"></canvas>
+        <div>
+            <p id="detected_letter"></p>
+            <button id="accept_letter" class="hidden">Yes</button><button id="reset_letter" class="hidden">Try
+                Again</button>
+        </div>
+        <p>Your email address: <span id="display_email"></span></p>
+    </div>
+    <button>Send</button>
+</body>
+
+</html>
