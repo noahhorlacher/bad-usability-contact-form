@@ -13,7 +13,7 @@
 
 body {
     margin: 0;
-    padding: 2em;
+    padding: 4em 2em 8em 2em;
     text-align: center;
     font-family: 'Nunito', sans-serif;
     color: var(--font);
@@ -39,4 +39,44 @@ canvas {
 
 .hidden {
     display: none;
+}
+
+#word_list_container {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    width: 400px;
+    margin: auto;
+}
+
+#message_container {
+    display: flex;
+    justify-content: center;
+}
+
+#word_btn_container {
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#word_btn_container button {
+    margin-bottom: .3em;
+}
+
+#text_message {
+    width: 400px;
+    height: 200px;
+    cursor: not-allowed;
+}
+
+#robot_container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4em;
+}
+
+#robot_container label {
+    margin: 0 0 0 .3em;
 }

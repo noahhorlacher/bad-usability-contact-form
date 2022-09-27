@@ -12,22 +12,20 @@
 
 <body>
     <h1>Contact Us</h1>
-    <hr>
     <div id="form">
-        <label>Your Name</label>
+        <label>Select Your Name</label>
         <div>
             <span id="display_name"></span>
             <button id="plus_name">+</button>
             <button id="minus_name">-</button>
         </div>
-        <label>Phone number</label>
+        <label>Enter Your Phone Number</label>
         <div>
             <span id="display_phone"></span>
             <button id="plus_phone">+</button>
             <button id="reset_phone">Reset</button>
         </div>
-        <label>Email Address</label>
-        <p>Draw a letter</p>
+        <label>Draw Your Email Address</label>
         <canvas id="canvas_letter"></canvas>
         <div>
             <p id="detected_letter"></p>
@@ -35,8 +33,23 @@
                 Again</button>
         </div>
         <p>Your email address: <span id="display_email"></span></p>
+        <label>Your message</label>
+        <div>
+            <div id="word_list_container">
+                <select size="5" id="list_words"></select>
+                <div id="word_btn_container">
+                    <button id="add_message">Add word to message</button>
+                    <button id="reset_message">Reset</button>
+                </div>
+            </div>
+            <textarea id="text_message" readonly></textarea>
+        </div>
     </div>
-    <button>Send</button>
+    <div id="robot_container">
+        <input id="robot" type="checkbox" checked>
+        <label for="robot">I am a robot</label>
+    </div>
+    <button id="button_send">Send</button>
 </body>
 
 </html>
