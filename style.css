@@ -1,23 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;0,900;1,400;1,900&display=swap');
 
 :root {
-    --background: #f2f2f2;
+    --background: hsl(260, 5%, 92%);
     --l-1: rgb(24, 24, 28);
-    --primary: hsl(195, 82%, 31%);
-    --primary-light: hsl(195, 72%, 41%);
-    --primary-transparent: hsla(195, 72%, 41%, .2);
+    --primary: hsl(260, 62%, 54%);
     --highlight: hsla(195, 0%, 70%, .2);
-    --round: 3px;
-    --font: rgba(0, 0, 0, .87)
+    --round: 8px;
+    --font: rgba(0, 0, 0, .87);
+    --shadow-1: 5px 5px 17px #cecece,
+        -5px -5px 17px #f2f2f2;
+    --l-1: linear-gradient(145deg, #f0f0f0, #f0f0f0);
+    --l-2: linear-gradient(145deg, #cacaca, #f0f0f0);
+    --p-1: linear-gradient(145deg, hsl(260, 62%, 54%), hsl(260, 62%, 54%));
+    --p-2: linear-gradient(145deg, hsl(260, 53%, 45%), hsl(260, 62%, 54%));
+}
+
+h1 {
+    position: fixed;
+    opacity: 0.87;
+    font-weight: 900;
+    font-size: 7em;
+    text-align: center;
+    line-height: 1;
+    margin: 0;
+    left: 0;
+    top: 1em;
+    color: var(--primary);
+    writing-mode: vertical-lr;
 }
 
 body {
     margin: 0;
     padding: 4em 2em 8em 2em;
     text-align: center;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: var(--font);
     background-color: var(--background);
+    letter-spacing: .15em;
+}
+
+textarea {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .1em;
+    font-weight: 500;
+    padding: .5em 1.2em;
+    font-size: 1.2em;
+    background-image: var(--l-1);
+    border-radius: var(--round);
+    border: 0;
+    box-shadow: var(--shadow-1);
 }
 
 label {
@@ -25,8 +56,8 @@ label {
     text-transform: uppercase;
     font-weight: bold;
     font-size: .8em;
-    margin-bottom: 1em;
-    margin-top: 3em;
+    margin-bottom: 2em;
+    margin-top: 5em;
 }
 
 #form {
@@ -34,7 +65,8 @@ label {
 }
 
 canvas {
-    border: thin black solid;
+    border-radius: var(--round);
+    box-shadow: var(--shadow-1);
 }
 
 .hidden {
@@ -45,7 +77,7 @@ canvas {
     display: flex;
     flex-direction: column;
     flex-basis: 50%;
-    width: 400px;
+    width: 600px;
     margin: auto;
 }
 
@@ -61,14 +93,21 @@ canvas {
     justify-content: space-between;
 }
 
+#display_name,
+#display_phone {
+    margin: 0 2em;
+}
+
 #word_btn_container button {
-    margin-bottom: .3em;
+    margin-bottom: .7em;
 }
 
 #text_message {
-    width: 400px;
+    resize: none;
+    width: 600px;
     height: 200px;
     cursor: not-allowed;
+    margin-top: 2em;
 }
 
 #robot_container {
@@ -78,5 +117,65 @@ canvas {
 }
 
 #robot_container label {
-    margin: 0 0 0 .3em;
+    margin: 0 0 0 .6em;
+    font-size: 1.4em;
+    text-transform: none;
+}
+
+button {
+    background-image: var(--l-1);
+    border: 0;
+    margin: .3em;
+    padding: 16px;
+    border-radius: var(--round);
+    box-shadow: var(--shadow-1);
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1rem;
+    position: relative;
+    text-align: left;
+    transition: .2s;
+    user-select: none;
+    touch-action: manipulation;
+    white-space: pre;
+    width: max-content;
+    word-break: normal;
+    word-spacing: normal;
+    font-weight: 600;
+}
+
+button:hover {
+    background-image: var(--l-2);
+}
+
+#list_words {
+    background-image: var(--l-1);
+    border: 0;
+    margin: .3em;
+    padding: 16px;
+    border-radius: var(--round);
+    box-shadow: var(--shadow-1);
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1rem;
+    position: relative;
+    text-align: left;
+    transition: .2s;
+    user-select: none;
+}
+
+#button_send {
+    color: white;
+    background-image: var(--p-1);
+    font-size: 1.4rem;
+    padding: .8em;
+    letter-spacing: 0.08em;
+}
+
+#button_send:hover {
+    background-image: var(--p-2);
 }

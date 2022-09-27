@@ -36,8 +36,11 @@ UI.list_words.value = UI.list_words.querySelector('option:first-of-type').value
 let message_chars = ".?!,: -"
 for (let char of message_chars.split('')) {
     let el = document.createElement('button')
-    el.innerText = `Add character "${char}" to message`
-    el.addEventListener('click', () => UI.text_message.value += char)
+    el.innerText = `Add "${char}" to message`
+    el.addEventListener('click', () => {
+        alert(`"${char}" has been added to message.`)
+        UI.text_message.value += char
+    })
     word_btn_container.append(el)
 }
 
@@ -77,7 +80,7 @@ let isDrawing = false
 const STROKEWIDTH = 8
 const SIZE_LETTER = 256, CTX_LETTER = canvas_letter.getContext('2d')
 UI.canvas_letter.width = UI.canvas_letter.height = SIZE_LETTER
-CTX_LETTER.fillStyle = '#fff'
+CTX_LETTER.fillStyle = '#f0f0f0'
 CTX_LETTER.fillRect(0, 0, SIZE_LETTER, SIZE_LETTER)
 
 UI.canvas_letter.addEventListener('mousedown', e => {

@@ -15,22 +15,22 @@
     <div id="form">
         <label>Select Your Name</label>
         <div>
-            <span id="display_name"></span>
             <button id="plus_name">+</button>
+            <span id="display_name"></span>
             <button id="minus_name">-</button>
         </div>
         <label>Enter Your Phone Number</label>
         <div>
+            <button id="reset_phone">Reset</button>
             <span id="display_phone"></span>
             <button id="plus_phone">+</button>
-            <button id="reset_phone">Reset</button>
         </div>
         <label>Draw Your Email Address</label>
         <canvas id="canvas_letter"></canvas>
         <div>
             <p id="detected_letter"></p>
-            <button id="accept_letter" class="hidden">Yes</button><button id="reset_letter" class="hidden">Try
-                Again</button>
+            <button id="accept_letter" class="hidden">Yes</button><button id="reset_letter"
+                class="hidden">Try&nbsp;Again</button>
         </div>
         <p>Your email address: <span id="display_email"></span></p>
         <label>Your message</label>
@@ -42,7 +42,7 @@
                     <button id="reset_message">Reset</button>
                 </div>
             </div>
-            <textarea id="text_message" readonly></textarea>
+            <textarea id="text_message" readonly placeholder="Start writing..."></textarea>
         </div>
     </div>
     <div id="robot_container">
