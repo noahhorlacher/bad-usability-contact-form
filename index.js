@@ -180,8 +180,6 @@ function 𝕖𝕞𝕒𝕚𝕝𝕀𝕤𝕍𝕒𝕝𝕚𝕕() {
     else if (𝔭𝔥𝔬𝔫𝔢 < 1) 𝕖𝕣𝕣𝕠𝕣("Invalid phone number.")
     // validate email
     else if (!𝕖𝕞𝕒𝕚𝕝𝕀𝕤𝕍𝕒𝕝𝕚𝕕()) 𝕖𝕣𝕣𝕠𝕣("Invalid email address.")
-    // validate message
-    else if (𝔪𝔢𝔰𝔰𝔞𝔤𝔢_𝔴𝔬𝔯𝔡𝔰.some(w => !𝖜𝖔𝖗𝖉𝖘.includes(w))) 𝕖𝕣𝕣𝕠𝕣(`Word ${𝔪𝔢𝔰𝔰𝔞𝔤𝔢_𝔴𝔬𝔯𝔡𝔰.find(w => !𝖜𝖔𝖗𝖉𝖘.includes(w))} is not in original word list. HACKER.`)
     // robot
     else if (ᑘᓰ.r̾o̾b̾o̾t̾.value) 𝕖𝕣𝕣𝕠𝕣("YOU ARE A ROBOT.")
     else {
